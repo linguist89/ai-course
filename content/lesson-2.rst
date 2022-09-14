@@ -1,2 +1,2 @@
-Quick Reference
+Lesson 2
 ---------------
