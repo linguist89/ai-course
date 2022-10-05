@@ -1,5 +1,5 @@
 AI for Humanities
-===========
+=================
 
 This course has been created to help anyone from the humanities (and beyond) to be able to use Artificial Intelligence (AI) in their work. It has been designed in such a way that those who work through it can use AI tools developed by the community with understanding of how they work. This is not a comprehensive course in AI, but rather a course that provides the quickest route from humanities to using AI tools in your own work. 
 
@@ -11,7 +11,7 @@ This course has been created to help anyone from the humanities (and beyond) to 
 
 .. toctree::
    :maxdepth: 1
-   :caption: The lesson
+   :caption: Lesson list
 
    lesson-1
    lesson-2
@@ -19,6 +19,7 @@ This course has been created to help anyone from the humanities (and beyond) to 
    lesson-4
    lesson-5
    lesson-6
+   case-study-posters
 
 
 .. _learner-personas:

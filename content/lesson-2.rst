@@ -38,7 +38,7 @@ Convert each small problem into actionable steps as simply as possible
 that can be followed by a human or a computer.
 
 What kind of data do you need (for supervised learning)?
----------------------------------------------------
+--------------------------------------------------------
 
 Once you have figured out what problem are you going to solve, you need
 to look at the data you have or you need to collect the data you need.
