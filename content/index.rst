@@ -20,6 +20,7 @@ This course has been created to help anyone from the humanities (and beyond) to 
    lesson-5
    lesson-6
    case-study-posters
+   case-study-entities
 
 
 .. _learner-personas:
