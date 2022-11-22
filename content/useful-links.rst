@@ -4,6 +4,7 @@ Useful Links
 Education
 ---------
 `Made with ML <https://madewithml.com/>`__ 
+
 `25-hour free PyTorch course <https://www.youtube.com/watch?v=Z_ikDlimN6A>`__
 
 
