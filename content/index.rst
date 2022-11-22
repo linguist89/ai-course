@@ -19,6 +19,7 @@ This course has been created to help anyone from the humanities (and beyond) to 
    lesson-4
    lesson-5
    lesson-6
+   useful-links
    case-study-posters
    case-study-entities
 
