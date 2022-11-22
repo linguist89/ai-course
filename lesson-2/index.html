@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 2: Getting started &mdash; AI for Humanities  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Lesson 3: The types of data that can be used as input" href="../lesson-3/" />
+    <link rel="prev" title="Lesson 1: AI course for humanities" href="../lesson-1/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> AI for Humanities
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Lesson list</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-1/">Lesson 1: AI course for humanities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 2: Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#determine-what-you-want-to-achieve-and-apply-the-four-steps-of-computational-thinking">Determine what you want to achieve and apply the four steps of computational thinking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decomposition">Decomposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pattern-recognition">Pattern recognition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#abstraction">Abstraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithmic-thinking">Algorithmic thinking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-kind-of-data-do-you-need-for-supervised-learning">What kind of data do you need (for supervised learning)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-type-of-deep-learning-problem-you-are-solving">The type of deep learning problem you are solving</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#housing-example">Housing example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dog-and-cat-example">Dog and cat example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hate-speech-example">Hate speech example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#movie-genres-example">Movie genres example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-do-you-do-with-the-data-now">What do you do with the data now?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#out-of-the-box-models">Out-of-the-box models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pretrained-models">Pretrained models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#training-a-model-from-scratch">Training a model from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-best-choice">What is the best choice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-3/">Lesson 3: The types of data that can be used as input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-4/">Lesson 4: Using out-of-the-box models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-5/">Lesson 5: Fine tuning pretrained models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-6/">Lesson 6: Training a model from scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../useful-links/">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case-study-posters/">Case study: Classifying film posters into different genres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../case-study-entities/">Case study: Extracting entities from a text</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">AI for Humanities</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Lesson 2: Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/content/blob/main/content/lesson-2.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-2-getting-started">
+<h1>Lesson 2: Getting started<a class="headerlink" href="#lesson-2-getting-started" title="Permalink to this headline"></a></h1>
+<section id="determine-what-you-want-to-achieve-and-apply-the-four-steps-of-computational-thinking">
+<h2>Determine what you want to achieve and apply the four steps of computational thinking<a class="headerlink" href="#determine-what-you-want-to-achieve-and-apply-the-four-steps-of-computational-thinking" title="Permalink to this headline"></a></h2>
+<p>There are four steps to computational thinking which is a process that
+helps you solve problems in as systematic way as possible. Below is a
+summary of those points, but consider —insert course link— if you want
+to understand it in more detail.</p>
+<section id="decomposition">
+<h3>Decomposition<a class="headerlink" href="#decomposition" title="Permalink to this headline"></a></h3>
+<p>This first step is to determine what the goal is that you are trying to
+achieve i.e. what is the problem you are trying to solve. Break that
+problem down into smaller steps each of which has a single desired
+outcome.</p>
+</section>
+<section id="pattern-recognition">
+<h3>Pattern recognition<a class="headerlink" href="#pattern-recognition" title="Permalink to this headline"></a></h3>
+<p>Look for patterns in the problems that you have decomposed which
+indicate if you could apply previous solutions to this new problem or
+group problems together to solve them quicker.</p>
+</section>
+<section id="abstraction">
+<h3>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline"></a></h3>
+<p>Rank order the decomposed steps into levels of priority and remove any
+unnecessary information from the problem in order to focus on only the
+key information that will help in solving it.</p>
+</section>
+<section id="algorithmic-thinking">
+<h3>Algorithmic thinking<a class="headerlink" href="#algorithmic-thinking" title="Permalink to this headline"></a></h3>
+<p>Convert each small problem into actionable steps as simply as possible
+that can be followed by a human or a computer.</p>
+</section>
+</section>
+<section id="what-kind-of-data-do-you-need-for-supervised-learning">
+<h2>What kind of data do you need (for supervised learning)?<a class="headerlink" href="#what-kind-of-data-do-you-need-for-supervised-learning" title="Permalink to this headline"></a></h2>
+<p>Once you have figured out what problem are you going to solve, you need
+to look at the data you have or you need to collect the data you need.
+The data needs to have two main characteristics: features and labels. An
+easy why to understand this is with the following sentence &gt; I want to
+determine <strong>labels</strong> from the <strong>features</strong></p>
+<p>Here are some examples: &gt; I want to determine <strong>the cost of a house</strong>
+from the <strong>number of bedrooms, the size of the garden and location</strong></p>
+<blockquote>
+<div><p>I want to determine if a photo is <strong>a dog or cat</strong> from <strong>photos of
+dogs and cats</strong></p>
+</div></blockquote>
+<blockquote>
+<div><p>I want to determine <strong>a hate speech</strong> from a list of <strong>hate speech
+sentences and normal sentences</strong></p>
+<p>I want to determine <strong>movie genres</strong> from <strong>a movie poster</strong></p>
+</div></blockquote>
+<p>The above examples are for your data when training the model - which we
+will go into detail in the next few sections. As you can see, the model
+is going to use the features of as many examples as possible to predict
+the labels. Let’s take the housing example and break it down further.
+You need to have four pieces of information organized in rows. Each row
+has four columns: 1) cost of the house, 2) number of bedrooms, 3) size
+of the garden and 4) location of the house. All this information is
+currently known, we are not trying to predict anything with this
+information. This is data that will be passed into the model and the
+model will figure out the patterns in the data which determine the
+price.</p>
+<p>So, what is the point of the model if we have all the information
+already? The point of using information have already is to calibrate the
+model so that when you feed new data into it, it can make a prediction
+about the price. We use the features and the labels to train the model,
+but when we use the model to predict something, we only need the
+features. In the housing example, once you have trained a model with
+that data, you can find a house that isn’t in the training data and pass
+those features (number of bedrooms, the size of the garden and the
+location) to find out what the likely cost is of the house. This applies
+to all the above examples and what’s important to note from this
+explanation is not the details, but rather the formula: &gt; I want to
+determine <strong>labels</strong> from the <strong>features</strong></p>
+</section>
+<section id="the-type-of-deep-learning-problem-you-are-solving">
+<h2>The type of deep learning problem you are solving<a class="headerlink" href="#the-type-of-deep-learning-problem-you-are-solving" title="Permalink to this headline"></a></h2>
+<p>The problems above are different types of deep learning problems because
+they are predicting different types of labels. Once you have determined
+what your labels are then you can determine what type of deep learning
+solution you need to provide.</p>
+<section id="housing-example">
+<h3>Housing example<a class="headerlink" href="#housing-example" title="Permalink to this headline"></a></h3>
+<p>You are predicting a number because a price is a number.</p>
+</section>
+<section id="dog-and-cat-example">
+<h3>Dog and cat example<a class="headerlink" href="#dog-and-cat-example" title="Permalink to this headline"></a></h3>
+<p>You are predicting one of two options i.e. a dog or a cat. This may seem
+simple, but there is a little detail here that might have gone
+unnoticed, so let’s think logically here. We have a model that can
+predict if a photo is of a dog or a cat. What happens if you show it a
+photo of something else? Well, it’s going to predict either dog or cat.
+So this model is good if you are trying to split photos of dogs and
+cats, but not so good if you want to predict whether a photo is a dog or
+cat.</p>
+</section>
+<section id="hate-speech-example">
+<h3>Hate speech example<a class="headerlink" href="#hate-speech-example" title="Permalink to this headline"></a></h3>
+<p>This is a good example of a binary classification problem which means
+you could answer the question with true or false i.e. is the sentence
+hate speech? False.</p>
+</section>
+<section id="movie-genres-example">
+<h3>Movie genres example<a class="headerlink" href="#movie-genres-example" title="Permalink to this headline"></a></h3>
+<p>This one may seem similar to the dog and cat example, but it’s slightly
+different. We show the model a movie poster and it tells us the genre of
+the movie. But, let’s think about this logically again - what if the
+movie can be described as two genres e.g. romantic comedy? This is not a
+problem, but we need to know that we are potentially predicting multiple
+labels for a single poster. This is called multilabel classification.</p>
+</section>
+</section>
+<section id="what-do-you-do-with-the-data-now">
+<h2>What do you do with the data now?<a class="headerlink" href="#what-do-you-do-with-the-data-now" title="Permalink to this headline"></a></h2>
+<p>Now that you have potential solutions to your problem and you have your
+data, you need to make a decision whether or not a deep learning model
+is appropriate for your problem and/or data. The general categorization
+for deep learning models are three different levels of customization:
+out-of-the-box models, pretrained models and building a model from
+scratch.</p>
+<section id="out-of-the-box-models">
+<h3>Out-of-the-box models<a class="headerlink" href="#out-of-the-box-models" title="Permalink to this headline"></a></h3>
+<p>These are models that have been built by someone else and can be used
+without the need to train anything. In theory these models would be
+perfect for someone who doesn’t know a lot about this field, but there
+are many downsides to these models. Usually they are nearly impossible
+to find for your specific tasks. Deep learning models are designed to
+solve a specific task, so unless you have the exact same task to solve
+as someone else, the chances of finding a deep learning model that
+perfectly solves your problem is very low. You can, however, use these
+models nonetheless, but the results won’t be as good as you they could
+be. An exception to this is going to a company that build models and
+paying for a model to be built. This will provide you with the ideal
+solution, but it will be very expensive and you will be buying a
+product, so you won’t learn anything from the process.</p>
+</section>
+<section id="pretrained-models">
+<h3>Pretrained models<a class="headerlink" href="#pretrained-models" title="Permalink to this headline"></a></h3>
+<p>Pretrained models are part of a specific type of deep learning called
+“transfer learning”. The easiest explanation of this is using a model
+trained for a general task on a task that it wasn’t trained on by fine
+tuning it. For example, if you have a model that can detect objects in
+photographs, you can fine tune that model by making it specifically
+detect different types of dog breeds. What it will do is use the
+information it has already learned (detecting the objects) as the
+foundation to make the specific task (detecting dog breeds) easier to do
+with less data required. To illustrate this concept further, you can
+think of pretrained models as vacuum cleaners. A vacuum cleaner is a
+device that has a motor, a bag and a long pipe. The function of the
+vacuum cleaner is to suck up dust from the floor (general task).
+However, you can also add different extras to the nozzle if you have
+different areas to clean (specific task) such as a thin extension for
+cleaning in small spaces, a brush extension for cleaning carpets, and
+various others. You don’t need to get a new vacuum cleaner each time you
+have a different area to clean, you only need to change the extra piece
+on the nozzle.</p>
+<p>In line with this analogy, when you use a pretrained model, the
+equivalent of changing the extra piece is called “fine tuning” the
+model. Although it’s a bit more complicated then simple changing the
+piece on the nozzle, the concept is the same. You still need data for
+your specific task and a plan on developing the code to fine tune the
+model. This is a very good way to get state-of-the-art results in a
+short amount of time with limited data. You are essentially using the
+power of the base model, so the heavy lifting has been done for you. It
+is important to note, that pretrained models are trained for different
+general tasks, so you still need to find a pretrained model that is in
+the domain of what you are doing.</p>
+</section>
+<section id="training-a-model-from-scratch">
+<h3>Training a model from scratch<a class="headerlink" href="#training-a-model-from-scratch" title="Permalink to this headline"></a></h3>
+<p>The most customizable option for deep learning models is training a
+model from scratch. This is the best way to get the most specific
+results for your problem, but it’s also the method that is the the most
+difficult. This is due to the fact that you need a lot more data than
+when you fine tune a model and you need to build everything from the
+ground up. Although, it shares many similarities with fine tuning a
+model with the biggest exception is that you aren’t leveraging the work
+done by a pretrained model. Since there are so many people working on
+deep learning projects today, there are plenty of pretrained models
+available, but people using train from scratch when there is a new paper
+published on a novel solution. In these cases, people will try to
+replicate the results from the paper, so they will have to train models
+from scratch. However, in most practical cases, it is usually sufficient
+to use pretrained models and fine tune them to specific tasks. If you
+need to train a model from scratch, the best way to do that is to find
+an academic article that has the type of model you are looking for.
+Usually they will have a code repository linked which you can use as a
+blueprint to train your own model based on that. It’s always good to
+start with some idea notion that the model has been proven to work,
+otherwise you are taking a stab in the dark - unless you are an expert
+in the field and you’re confident about your abilities.</p>
+</section>
+<section id="what-is-the-best-choice">
+<h3>What is the best choice<a class="headerlink" href="#what-is-the-best-choice" title="Permalink to this headline"></a></h3>
+<p>Choosing which of these options is the best solution depends on the
+specific problem that you need to solve, so there is not ideal solution.
+However, a pretrained model is usually a good choice because there are
+plenty to choose from, they don’t cost anything to use (except GPU
+costs) and they are customizable enough to produce good results for
+novel problems. The main focus of this course will be how to leverage
+the power of pretrained models, but we will also cover the other methods
+to get a good understanding of how they can be used as well.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lesson-1/" class="btn btn-neutral float-left" title="Lesson 1: AI course for humanities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lesson-3/" class="btn btn-neutral float-right" title="Lesson 3: The types of data that can be used as input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, The contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
